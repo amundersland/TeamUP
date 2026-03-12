@@ -4,7 +4,7 @@ about: Have a standardized way of describing a user story
 title: ''
 labels: ''
 assignees: amundersland
-issue type: User Story
+Issue Type: User Story
 
 ---
 
