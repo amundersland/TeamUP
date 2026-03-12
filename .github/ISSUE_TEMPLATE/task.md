@@ -1,8 +1,8 @@
 ---
 name: Task
-about: Standard way of describing a task
+about: Scrum Task
 title: ''
-labels: ''
+labels: task
 assignees: amundersland
 
 ---

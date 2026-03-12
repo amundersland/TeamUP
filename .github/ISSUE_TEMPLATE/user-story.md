@@ -1,9 +1,10 @@
 ---
 name: User Story
-about: Have a standardized way of describing a user story
+about: Scrum User Story
 title: ''
-labels: ''
+labels: user-story
 assignees: amundersland
+
 ---
 
 As a user I want ...
