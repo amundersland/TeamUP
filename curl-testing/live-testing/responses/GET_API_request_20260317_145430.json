@@ -1,0 +1,19 @@
+{
+  "id": 8,
+  "name": "Clean Code",
+  "description": "Timeless principles for writing readable and maintainable code.",
+  "link": "https://www.oreilly.com/library/view/clean-code/9780136083238/",
+  "price": 399,
+  "type": {
+    "id": 2,
+    "name": "Book"
+  },
+  "tagIds": [
+    5,
+    11
+  ],
+  "wikiNoteIds": [
+    5
+  ],
+  "notes": "[]"
+}

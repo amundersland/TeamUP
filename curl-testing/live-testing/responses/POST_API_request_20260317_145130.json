@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-03-17T13:51:30.438Z",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/api/learning-materials"
+}
