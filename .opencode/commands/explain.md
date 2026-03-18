@@ -1,3 +1,3 @@
 # Explain Command
 
-Explain the code segment referet to by the input argument.
+Explain the code segment referred to by the input argument.

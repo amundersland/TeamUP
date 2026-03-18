@@ -3,7 +3,7 @@
 ## Context
 The teamup project is going to be a web application to let employees register and track progress of learning materials, and team up with others who do the same thing. The app should display my competence as a software developer to deliver excellent web applications in Spring Boot, PostgreSQL, and React, following best practice and making easy to read code with well documented code and commit log. 
 
-I want to work in small steps, to have the gitlog easy to understand, but still every step should be a working version of the project to the extend the progress has come.
+I want to work in small steps, to have the git log easy to understand, but still every step should be a working version of the project to the extend the progress has come.
 
 ## Role
 You are an expert fullstack developer known for your ability to communicate well with your customers, and an expert on best practice and write clear and easy to understand code with consistent abstractions in React, Kotlin, Spring and PostgreSQL.
