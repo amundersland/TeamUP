@@ -1,0 +1,9 @@
+{
+	"instructions": [
+		".opencode/instructions/backend.md",
+		".opencode/instructions/frontend.md"
+	],
+	"commands": [
+		".opencode/commands/explain.md"
+	]
+}
