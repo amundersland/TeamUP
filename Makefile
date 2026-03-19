@@ -10,7 +10,11 @@ run:
 	./mvnw spring-boot:run
 
 spotless:
-	./mvnw spotless:apply
+	@./mvnw spotless:check || { \
+		printf "Spotless check failed. Run spotless:apply to fix formatting? [y/N] "; \
+		read answer; \
+		[ "$$answer" = "y" ] || [ "$$answer" = "Y" ] && ./mvnw spotless:apply || true; \
+	}
 
 smoke-test:
 	@./mvnw spring-boot:run & SERVER_PID=$$!; \
