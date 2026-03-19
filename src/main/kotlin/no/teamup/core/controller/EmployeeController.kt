@@ -22,6 +22,12 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 @Tag(name = "Employee", description = "API for managing employees")
 class EmployeeController {
+    private fun getDummyEmployees(): List<Employee> =
+        listOf(
+            Employee(id = 1, fullname = "Ola Nordmann", jobTitle = "Senior Developer", age = 30),
+            Employee(id = 2, fullname = "Kari Hansen", jobTitle = "Product Manager", age = 28),
+        )
+
     @GetMapping("/employees")
     @Operation(summary = "Get all employees", description = "Retrieves a list of all employees in the database")
     @ApiResponses(
@@ -31,10 +37,7 @@ class EmployeeController {
     )
     fun getAllEmployees(): List<Employee> {
         // TODO: Implement database retrieval
-        return listOf(
-            Employee(id = 1, fullname = "Ola Nordmann", jobTitle = "Senior Developer", age = 30),
-            Employee(id = 2, fullname = "Kari Hansen", jobTitle = "Product Manager", age = 28),
-        )
+        return getDummyEmployees()
     }
 
     @GetMapping("/employees/{id}")
@@ -53,7 +56,7 @@ class EmployeeController {
         @PathVariable id: Int,
     ): ResponseEntity<Employee> {
         // TODO: Implement database lookup by ID
-        val employee = getAllEmployees().find { it.id == id }
+        val employee = getDummyEmployees().find { it.id == id }
         return if (employee != null) {
             ResponseEntity.ok(employee)
         } else {
