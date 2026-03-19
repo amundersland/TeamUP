@@ -74,11 +74,12 @@ class LearningMaterialController {
         @PathVariable id: Int,
     ): ResponseEntity<LearningMaterial> {
         // TODO: Implement database lookup by ID
-        val material = if (id == 1) {
-            getDummyLearningMaterials().find { it.id == 1 }
-        } else {
-            null
-        }
+        val material =
+            if (id == 1) {
+                getDummyLearningMaterials().find { it.id == 1 }
+            } else {
+                null
+            }
         return if (material != null) {
             ResponseEntity.ok(material)
         } else {
