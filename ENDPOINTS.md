@@ -336,7 +336,7 @@ To transform this barebone implementation into a fully functional backend:
 
 - **Spring Boot:** 4.0.3
 - **Kotlin:** 2.2.21
-- **Java:** 24
+- **Java:** 25
 - **Build Tool:** Maven
 - **API Documentation:** SpringDoc OpenAPI 3.0.1
 - **Code Formatting:** Spotless with KtLint 1.8.0

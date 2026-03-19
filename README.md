@@ -19,7 +19,7 @@ This implementation contains:
 ## Quick Start
 
 ### Prerequisites
-- Java 24 installed
+- Java 25 installed
 - Maven (or use the included Maven wrapper)
 
 ### Build the Project
