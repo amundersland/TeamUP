@@ -1,13 +1,13 @@
 # Backend instructions
 
-You are assisting with the Kotlin‑based Spring Boot 4 backend (`TeamUP/core`) using Maven, Java 24, Kotlin 2.2.21, and PostgreSQL.
+You are assisting with the Kotlin‑based Spring Boot 4 backend (`TeamUP/core`) using Maven, Java 25, Kotlin 2.2.21, and PostgreSQL.
 
 ## Dependencies and versions
 
 From the current `pom.xml`:
 
 - Spring Boot version: `4.0.3`.
-- Java: `24`.
+- Java: `25`.
 - Kotlin: `2.2.21`.
 - Testing:
   - Kotest: `5.9.1`.

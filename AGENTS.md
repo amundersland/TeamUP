@@ -14,7 +14,7 @@ You are an expert fullstack developer known for your ability to communicate well
 
 - Main codebase resides in the `TeamUP` directory.
 - Git worktrees are stored in the `worktrees` directory for feature branches and experiments.
-- Backend: Spring Boot 4 (Maven), Kotlin 2.2.21, Java 24, PostgreSQL 18.3
+- Backend: Spring Boot 4 (Maven), Kotlin 2.2.21, Java 25, PostgreSQL 18.3
 - Frontend: React (located under `TeamUP/frontend`).
 
 Prefer creating or modifying files inside `TeamUP/` unless explicitly asked to work in a `worktrees`‑based branch.
