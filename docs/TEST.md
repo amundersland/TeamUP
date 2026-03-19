@@ -5,7 +5,7 @@ This guide provides step-by-step instructions for manually testing the barebone 
 ## Prerequisites
 
 Before starting the tests, ensure you have:
-- Java 24 installed
+- Java 25 installed
 - The application built successfully (`./mvnw clean install`)
 
 ---
