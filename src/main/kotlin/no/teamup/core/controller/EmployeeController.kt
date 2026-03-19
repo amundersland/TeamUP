@@ -53,11 +53,8 @@ class EmployeeController {
         @PathVariable id: Int,
     ): ResponseEntity<Employee> {
         // TODO: Implement database lookup by ID
-        return if (id == 1) {
-            ResponseEntity.ok(Employee(id = 1, fullname = "Ola Nordmann", jobTitle = "Senior Developer", age = 30))
-        } else {
-            ResponseEntity.notFound().build()
-        }
+        val employee = Employee(id = id, fullname = "Ola Nordmann", jobTitle = "Senior Developer", age = 30)
+        return ResponseEntity.ok(employee)
     }
 
     @PostMapping("/employees")

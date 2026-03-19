@@ -20,8 +20,8 @@ data class LearningMaterial(
     val tagIds: IntArray = intArrayOf(),
     @Schema(description = "Array of wiki note IDs associated with this learning material", example = "[1,2]")
     val wikiNoteIds: IntArray = intArrayOf(),
-    @Schema(description = "JSONB array of notes", example = "[]")
-    val notes: String = "[]",
+    @Schema(description = "Array of notes (stored as a JSONB array in the database)", example = "[\"Note 1\", \"Note 2\"]")
+    val notes: List<String> = emptyList(),
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

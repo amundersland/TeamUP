@@ -23,15 +23,8 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 @Tag(name = "Learning Material", description = "API for managing learning materials")
 class LearningMaterialController {
-    @GetMapping("/learning-materials")
-    @Operation(summary = "Get all learning materials", description = "Retrieves a list of all learning materials in the database")
-    @ApiResponses(
-        value = [
-            ApiResponse(responseCode = "200", description = "List of learning materials retrieved successfully"),
-        ],
-    )
-    fun getAllLearningMaterials(): List<LearningMaterial> {
-        // TODO: Implement database retrieval
+
+    private fun getDummyLearningMaterials(): List<LearningMaterial> {
         val bookType = LearningMaterialType(id = 1, name = "Book")
         val courseType = LearningMaterialType(id = 2, name = "Course")
         return listOf(
@@ -60,6 +53,18 @@ class LearningMaterialController {
         )
     }
 
+    @GetMapping("/learning-materials")
+    @Operation(summary = "Get all learning materials", description = "Retrieves a list of all learning materials in the database")
+    @ApiResponses(
+        value = [
+            ApiResponse(responseCode = "200", description = "List of learning materials retrieved successfully"),
+        ],
+    )
+    fun getAllLearningMaterials(): List<LearningMaterial> {
+        // TODO: Implement database retrieval
+        return getDummyLearningMaterials()
+    }
+
     @GetMapping("/learning-materials/{id}")
     @Operation(summary = "Get learning material by ID", description = "Retrieves a specific learning material based on ID")
     @ApiResponses(
@@ -76,21 +81,9 @@ class LearningMaterialController {
         @PathVariable id: Int,
     ): ResponseEntity<LearningMaterial> {
         // TODO: Implement database lookup by ID
-        return if (id == 1) {
-            val bookType = LearningMaterialType(id = 1, name = "Book")
-            ResponseEntity.ok(
-                LearningMaterial(
-                    id = 1,
-                    name = "Kotlin in Action",
-                    description = "Comprehensive guide to Kotlin programming",
-                    link = "https://example.com/kotlin-book",
-                    price = 4995,
-                    type = bookType,
-                    tagIds = intArrayOf(1, 2),
-                    wikiNoteIds = intArrayOf(),
-                    notes = "[]",
-                ),
-            )
+        val material = getDummyLearningMaterials().find { it.id == id }
+        return if (material != null) {
+            ResponseEntity.ok(material)
         } else {
             ResponseEntity.notFound().build()
         }

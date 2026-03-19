@@ -14,6 +14,6 @@ class OpenApiConfig {
                 Info()
                     .title("TeamUP API")
                     .version("1.0")
-                    .description("REST API for TeamUP - administrere personer og oppgaver"),
+                    .description("REST API for TeamUP - administrere ansatte og læringsmateriell"),
             )
 }
