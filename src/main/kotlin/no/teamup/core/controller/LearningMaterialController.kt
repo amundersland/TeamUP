@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 @Tag(name = "Learning Material", description = "API for managing learning materials")
 class LearningMaterialController {
-
     private fun getDummyLearningMaterials(): List<LearningMaterial> {
         val bookType = LearningMaterialType(id = 1, name = "Book")
         val courseType = LearningMaterialType(id = 2, name = "Course")
@@ -35,9 +34,6 @@ class LearningMaterialController {
                 link = "https://example.com/kotlin-book",
                 price = 4995,
                 type = bookType,
-                tagIds = intArrayOf(1, 2),
-                wikiNoteIds = intArrayOf(),
-                notes = "[]",
             ),
             LearningMaterial(
                 id = 2,
@@ -46,9 +42,6 @@ class LearningMaterialController {
                 link = "https://example.com/spring-course",
                 price = 9900,
                 type = courseType,
-                tagIds = intArrayOf(3, 4),
-                wikiNoteIds = intArrayOf(1),
-                notes = "[]",
             ),
         )
     }
