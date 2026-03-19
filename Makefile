@@ -13,7 +13,7 @@ spotless:
 	@./mvnw spotless:check || { \
 		printf "Spotless check failed. Run spotless:apply to fix formatting? [y/N] "; \
 		read answer; \
-		[ "$$answer" = "y" ] || [ "$$answer" = "Y" ] && ./mvnw spotless:apply || true; \
+		[ "$$answer" = "y" ] && ./mvnw spotless:apply || true; \
 	}
 
 smoke-test:
