@@ -5,7 +5,7 @@ This guide provides step-by-step instructions for manually testing the barebone 
 ## Prerequisites
 
 Before starting the tests, ensure you have:
-- Java 25 installed
+- Java 24 installed
 - The application built successfully (`./mvnw clean install`)
 
 ---
@@ -338,9 +338,7 @@ curl -X GET http://localhost:8080/api/learning-materials/1
     "id": 1,
     "name": "Book"
   },
-  "tagIds": [1, 2],
-  "wikiNoteIds": [],
-  "notes": "[]"
+  "notes": ["Great introduction to Kotlin"]
 }
 ```
 
@@ -374,10 +372,7 @@ curl -X GET http://localhost:8080/api/learning-materials/999
   "type": {
     "id": 1,
     "name": "Book"
-  },
-  "tagIds": [1, 5],
-  "wikiNoteIds": [],
-  "notes": "[]"
+  }
 }
 ```
 4. Click "Execute"
@@ -394,10 +389,7 @@ curl -X POST http://localhost:8080/api/learning-materials \
     "type": {
       "id": 1,
       "name": "Book"
-    },
-    "tagIds": [1, 5],
-    "wikiNoteIds": [],
-    "notes": "[]"
+    }
   }'
 ```
 
@@ -413,9 +405,7 @@ curl -X POST http://localhost:8080/api/learning-materials \
     "id": 1,
     "name": "Book"
   },
-  "tagIds": [1, 5],
-  "wikiNoteIds": [],
-  "notes": "[]"
+  "notes": []
 }
 ```
 
@@ -441,10 +431,7 @@ curl -X POST http://localhost:8080/api/learning-materials \
   "type": {
     "id": 1,
     "name": "Book"
-  },
-  "tagIds": [1, 2, 6],
-  "wikiNoteIds": [],
-  "notes": "[]"
+  }
 }
 ```
 5. Click "Execute"
@@ -461,10 +448,7 @@ curl -X PUT http://localhost:8080/api/learning-materials/1 \
     "type": {
       "id": 1,
       "name": "Book"
-    },
-    "tagIds": [1, 2, 6],
-    "wikiNoteIds": [],
-    "notes": "[]"
+    }
   }'
 ```
 
@@ -480,9 +464,7 @@ curl -X PUT http://localhost:8080/api/learning-materials/1 \
     "id": 1,
     "name": "Book"
   },
-  "tagIds": [1, 2, 6],
-  "wikiNoteIds": [],
-  "notes": "[]"
+  "notes": []
 }
 ```
 
@@ -501,10 +483,7 @@ curl -X PUT http://localhost:8080/api/learning-materials/999 \
     "type": {
       "id": 1,
       "name": "Book"
-    },
-    "tagIds": [],
-    "wikiNoteIds": [],
-    "notes": "[]"
+    }
   }'
 ```
 
