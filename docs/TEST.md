@@ -291,10 +291,7 @@ curl -X GET http://localhost:8080/api/learning-materials
     "type": {
       "id": 1,
       "name": "Book"
-    },
-    "tagIds": [1, 2],
-    "wikiNoteIds": [],
-    "notes": "[]"
+    }
   },
   {
     "id": 2,
@@ -305,10 +302,7 @@ curl -X GET http://localhost:8080/api/learning-materials
     "type": {
       "id": 2,
       "name": "Course"
-    },
-    "tagIds": [3, 4],
-    "wikiNoteIds": [1],
-    "notes": "[]"
+    }
   }
 ]
 ```
