@@ -170,10 +170,7 @@ http://localhost:8080/swagger-ui.html
     "type": {
       "id": 1,
       "name": "Book"
-    },
-    "tagIds": [1, 2],
-    "wikiNoteIds": [],
-    "notes": "[]"
+    }
   },
   {
     "id": 2,
@@ -184,10 +181,7 @@ http://localhost:8080/swagger-ui.html
     "type": {
       "id": 2,
       "name": "Course"
-    },
-    "tagIds": [3, 4],
-    "wikiNoteIds": [1],
-    "notes": "[]"
+    }
   }
 ]
 ```
@@ -208,10 +202,7 @@ http://localhost:8080/swagger-ui.html
   "type": {
     "id": 1,
     "name": "Book"
-  },
-  "tagIds": [1, 2],
-  "wikiNoteIds": [],
-  "notes": "[]"
+  }
 }
 ```
 
