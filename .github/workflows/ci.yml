@@ -10,6 +10,8 @@ jobs:
   verify:
     name: Verify formatting and that unit tests are green
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
     steps:
       - uses: actions/checkout@v4
 
