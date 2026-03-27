@@ -7,8 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  spotless:
-    name: Spotless Check
+  verify:
+    name: Verify formating and that unit tests are green
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,32 +22,11 @@ jobs:
       - name: Cache Maven packages
         uses: actions/cache@v4
         with:
-          path: ~/.m2
+          path: ~/.m2/repository
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
       - name: Run Spotless check
         run: ./mvnw spotless:check
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          java-version: "24"
-          distribution: "temurin"
-
-      - name: Cache Maven
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
-      - name: Build and test
+      - name: Run unit tests
         run: ./mvnw clean test --batch-mode
