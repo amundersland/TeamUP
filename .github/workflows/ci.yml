@@ -29,4 +29,4 @@ jobs:
       - name: Run Spotless check
         run: ./mvnw spotless:check
       - name: Run unit tests
-        run: ./mvnw clean test --batch-mode
+        run: ./mvnw test --batch-mode
