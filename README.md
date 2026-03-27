@@ -142,4 +142,3 @@ See [ENDPOINTS.md](./ENDPOINTS.md) for detailed instructions on:
 
 **Problem:** Maven build fails  
 **Solution:** Ensure you have internet connection for dependency downloads, or try `./mvnw clean install -U` to force update dependencies
-test
